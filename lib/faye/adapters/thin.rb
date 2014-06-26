@@ -57,6 +57,7 @@ class Thin::Response
   def head
     p async
     p status
+    p "was here"
     return async ? '' : thin_head
   end
 end
