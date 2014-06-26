@@ -55,7 +55,7 @@ class Thin::Response
   alias :thin_head :head
 
   def head
-    return '' if async and status == 101
-    thin_head
+    return (async and status == 101) ? '' : thin_head
+    
   end
 end
