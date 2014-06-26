@@ -55,6 +55,8 @@ class Thin::Response
   alias :thin_head :head
 
   def head
+    p async
+    p status
     return async ? '' : thin_head
   end
 end
