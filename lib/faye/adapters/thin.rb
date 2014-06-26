@@ -54,10 +54,5 @@ class Thin::Response
   attr_accessor :async
   alias :thin_head :head
 
-  def head
-    p async
-    p status
-    p "was here"
-    return async ? '' : thin_head
-  end
+
 end
